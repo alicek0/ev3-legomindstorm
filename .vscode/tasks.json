@@ -1,0 +1,19 @@
+{
+  "label": "Upload and Run on EV3",
+  "type": "shell",
+  "command": "sh",
+  "args": [
+    "-c",
+    "scp ${file} robot@172.17.69.116:/home/robot/ev3project/ && ssh -t robot@172.17.69.116 \"chmod +x /home/robot/ev3project/${fileBasename} && brickrun -r --directory=/home/robot/ev3project /home/robot/ev3project/${fileBasename}\""
+  ],
+  "group": {
+    "kind": "build",
+    "isDefault": true
+  },
+  "problemMatcher": [],
+  "presentation": {
+    "reveal": "always",
+    "panel": "dedicated",
+    "focus": true
+  }
+}
