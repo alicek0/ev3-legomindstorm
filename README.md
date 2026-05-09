@@ -57,6 +57,12 @@ A 3-vehicle autonomous convoy system built with LEGO Mindstorm EV3, implementing
 | `PARK` | Begin parking sequence |
 | `ALL_PARK_READY` | All vehicles ready to park |
 
+### Synchronized Parking Protocol
+1. Leader detects parking space → sends `PARK` to all followers
+2. Each follower stops, sends `PARK_READY` to leader
+3. Leader waits until all followers confirm ready
+4. Leader broadcasts `ALL_PARK_READY` → all vehicles execute parking simultaneously
+
 ## Project Structure
 
 ```
@@ -76,3 +82,4 @@ ev3-legomindstorm/
 **Embedded Software Design** | Hanyang University ERICA | Fall 2025
 
 Team project (3 members). Each member independently implemented both leader and follower vehicle logic, and took turns operating as the leader vehicle during testing. I was responsible for the full implementation of both `server.py` (leader) and `third_week_follower.py` (follower), including PID tuning, color-based traffic sign detection, Bluetooth communication, and automated parking sequence.
+
