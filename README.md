@@ -60,13 +60,12 @@ A 3-vehicle autonomous convoy system built with LEGO Mindstorm EV3, implementing
 ## Project Structure
 
 ```
-ev3-legomindstorm/
-├── server.py                  # Leader vehicle (final)
+ev3-legomindstorm/   
 ├── third_week_follower.py     # Follower vehicle (final)
-├── third_week_leader.py       # Leader vehicle (week 3 iteration)
+├── third_week_leader.py       # Leader vehicle (final)
 ├── lane_change_test.py        # Lane change testing
 ├── parking_test.py            # Parking maneuver testing
-├── color_sensor_test.py       # Color sensor calibration
+├── color_sensor_test.py       # Color sensor calibration testing
 ├── bluetooth_server_test.py   # Bluetooth server testing
 ├── bluetooth_client_test.py   # Bluetooth client testing
 └── ...                        # Weekly iteration files
